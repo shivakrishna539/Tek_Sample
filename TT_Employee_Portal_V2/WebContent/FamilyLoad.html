@@ -1,0 +1,168 @@
+<html>
+<head>
+<style type="text/css">
+#bdy{ border : 1px solid black;  background-color :  #a3c2c2 ; text-align : left ; padding-left:10px; height : 400px;}
+#btn {   background-color: #006666 ;
+  border: 1px rounded;
+  color: white;
+  padding: 8px 11px;
+ float:right;
+ margin-right:120px;
+ margin-top:15px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  }
+ margin-right:120px;
+ margin-top:15px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  }
+  #cname{margin-left:36px;width : 120px;}
+  #locate{width :90px;margin-left : 70px;}
+#lleft { margin-left : 70px;    }
+#ipleft { width : 120px; margin-left : 40px;    }
+#dsgn { width : 120px;  margin-left : 50px;   }
+#ipleft2{width : 70px; margin-left:58px;}
+#ipleft2a{width : 70px; margin-left:65px;}
+ #ipleft3{width:80px;}
+ #ctc{margin-left: 50px; width: 80px;}
+ #ctc2{width:80px; margin-left: 60px;  }
+#more_fields{ margin-left : 50px;  }
+body {border:1px solid black; 
+width: 1250px;
+height : 800px;
+background-color: #a3c2c2;}
+input { margin-left : 20px; }
+</style>
+<script>
+var a = 1; var b = 1; var c = 1; var d = 1;var e = 1;var f = 1; var g = 1; var k = 1; var l= 1;
+
+function textBoxCreate(){
+	
+		  var sl1 = document.createElement("SELECT");
+		  sl1.setAttribute("id", "mySelect_"+k);
+		  sl1.setAttribute("Name", "mySelect_"+k);
+		  document.getElementById("row1").appendChild(sl1);
+
+		  var op0 = document.createElement("option");
+		  op0.setAttribute("name", "slct_"+ k);
+		  var t = document.createTextNode("Select");
+		  op0.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op0);
+		  
+		  var op1 = document.createElement("option");
+		  op1.setAttribute("name", "father_"+ k);
+		  var t = document.createTextNode("Father");
+		  op1.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op1);
+		  
+		  var op2= document.createElement("option");
+		  op2.setAttribute("name", "mother_"+ k);
+		  var t = document.createTextNode("Mother");
+		  op2.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op2);
+		  
+		  var op3= document.createElement("option");
+		  op3.setAttribute("name", "wife_"+ k);
+		  var t = document.createTextNode("Wife");
+		  op3.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op3);
+		  
+		  var op4= document.createElement("option");
+		  op4.setAttribute("name", "child1_"+ k);
+		  var t = document.createTextNode("Child1");
+		  op4.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op4);
+		  
+		  var op5= document.createElement("option");
+		  op5.setAttribute("name", "child2_"+ k);
+		  var t = document.createTextNode("Child2");
+		  op5.appendChild(t);
+		  document.getElementById("mySelect_"+k).appendChild(op5);
+		  k++;
+	  
+	var a1 = document.createElement("INPUT");
+	a1.setAttribute("type", "text");
+	a1.setAttribute("id","name");
+	a1.setAttribute("Name", "name_" + a);
+	document.getElementById("row1").appendChild(a1);
+	a++;
+	var b1 = document.createElement("INPUT");
+	b1.setAttribute("type", "date");
+	b1.setAttribute("id","dob");
+	b1.setAttribute("Name", "dob_" + b);
+	document.getElementById("row1").appendChild(b1);
+	b++;
+var c1 = document.createElement("INPUT");
+c1.setAttribute("type", "text");
+c1.setAttribute("id","workname");
+c1.setAttribute("Name", "wrkname_" + c);
+document.getElementById("row1").appendChild(c1);
+c++;
+var d1 = document.createElement("INPUT");
+d1.setAttribute("type", "text");
+d1.setAttribute("id","wl");
+d1.setAttribute("Name", "wrklcn_" + d);
+document.getElementById("row1").appendChild(d1);
+d++;
+var e1 = document.createElement("INPUT");
+e1.setAttribute("type", "text");
+e1.setAttribute("id","email");
+e1.setAttribute("Name", "email_" + e);
+document.getElementById("row1").appendChild(e1);
+e++;
+var f1 = document.createElement("INPUT");
+f1.setAttribute("type", "text");
+f1.setAttribute("id","mobile");
+f1.setAttribute("Name", "mobile_" + e);
+document.getElementById("row1").appendChild(f1);
+e++;
+}
+function load()
+{
+	document.list.submit();
+	}
+</script>
+
+
+</head>
+<body id="bdy" >
+<button id="btn" class="name" onclick="textBoxCreate()">Add</button>
+<form action="EmployeeFamily" id="mainform" method="post" name="mainform">
+ <label>  Relation : </label > <label id="lleft">  Name : </label> <label style = "margin-left:100px; id="lleft">  DOB  : </label> 
+ <label style = "margin-left:100px; id="lleft">  work/study name  : </label> <label id="lleft"style = "margin-left:50px;"> Work/study location  : </label> <label id="lleft"> Email : </label> <label id="lleft" style="margin-left:100px;">  Mobile  : </label> 
+ <br>
+ 
+ <select id="relation" style="width:90px;margin-left:0px;" name="mySelect" onchange="selectType()">
+	                                                    <option name="slct_" vlaue="none">--</option>
+	                                                    <option name="father_" vlaue="fa">Father</option>
+														<option name="mother_" vlaue="md">Mother</option>
+														<option name="wife_" vlaue="wife">Wife</option>
+														<option name="child1_" vlaue="cd">Child_1</option>
+														<option name="child2_" vlaue="cd1">Child_2</option>
+	                                                  </select>
+<input type="text" style="width:110px; margin-left:36px;" name="name_" />
+<input type="date" style="width:120px; margin-left:36px;" name="dob_" />
+<input type="text" style="width:120px; margin-left:36px;" name="wrkname_" />
+<input type="text" style="width:120px; margin-left:36px;" name="wrklocation_"/>
+<input type="text" style="width:120px; margin-left:36px;" name="email_" />
+<input type="text" style="width:120px; margin-left:36px;" name="mobile_" />
+
+
+<p id="row1"></p> <br>
+<input type="submit" value="Submit" />
+</form>
+
+<a href="TT_Education_details.html" id="btn1" >Next</a>
+<a href="TT_EMP_Registration.html" id="btn1" >Cancel</a>
+<form action="FamilyList" method="post"  name="list">
+<input type="text" placeholder="Name..." name="name"/>&nbsp 
+<input type="text" placeholder="Skill..." name="Skill"/>&nbsp 
+<input type="text" placeholder="Designation..." name="Designation"/> 
+<input type="submit"   value="Search">
+</form>
+
+</body>
+</html>
