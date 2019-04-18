@@ -1,0 +1,140 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		  
+		  
+		 <link href="AR_css_file.css"    rel = "stylesheet"/>
+   <script type="text/javascript">
+
+	function updatePrice() {
+	
+		  // Get the ex-GST price from its form element
+	var amt = document.getElementById("amtrs").value;
+
+	 var st = amt * 0.14;
+	 var st1 = Math.round(st * 100) / 100
+	var sbc = amt * 0.005;
+	 var sbc1 = Math.round(sbc * 100) / 100
+	var kkc = amt * 0.005;
+	 var kkc1 = Math.round(kkc * 100) / 100
+	var cgst = amt * 0.9 ;
+	 var cgst1 = Math.round(cgst * 100) / 100
+	var sgst = amt * 0.9;
+	 var sgst1 = Math.round(sgst * 100) / 100
+	var igst = amt * 0.18;
+	 var igst1 = Math.round(igst * 100) / 100
+	var igstsez = amt * 0;
+	var tamnt = parseFloat(st) + parseFloat(amt) + parseFloat(sbc) + parseFloat(kkc) + parseFloat(cgst) + parseFloat(sgst) + parseFloat(igst) ;
+	
+	var tamnt1 = Math.round(tamnt * 100) / 100
+
+
+	document.getElementById("st").value = st1;
+	document.getElementById("sbc").value = sbc1 ;
+	document.getElementById("kkc").value = kkc1;
+	document.getElementById("cgst").value = cgst1;
+	document.getElementById("sgst").value = sgst1;
+	document.getElementById("igst").value = igst1;
+	document.getElementById("igstsez").value = igstsez;
+	document.getElementById("tamnt").value = tamnt1;
+
+
+
+	}
+	</script>
+		<style>
+		   input[type=text],input[type=date],input[type=number],input[type=month],input[type=search]
+				 {width:130px;}
+	</style>
+  </head>
+		<body style="background-color:#a3c2c2;margin:5px;">
+		<div class="container-fluid">
+		<div class="row">
+		<form action="" method="post" name="invoice" id="invoice">
+		  <div id="invce">
+			<label class="hd" style="margin-left:20px;"><b>Invoice details</b></label><br/><br/><br/>
+			<label for="date"> Date: </label>
+			<input id="date" name="date" type='date' class="form-control input-sm"/> 
+			<label  for="qkbk"> Quick book #: </label>
+			<input id="qkbk" name="qkbk" type="text" class="form-control input-sm"/>
+			<label for="invoice no"> Invoice No: </label>
+			<input id="invceno" name="invceno" type="text" class="form-control input-sm"/>
+			<label for="amtrs"> Amt Rs: </label>
+			<input id="amtrs" name="amtrs" type="number" oninput="updatePrice()" class="form-control input-sm"/>
+			<label for="st"> S.T : </label>
+			<input id="st" name="st" type="number" class="form-control input-sm"/>
+			<label for="sbc"> SBC: </label>
+			<input name="sbc" id="sbc" type="number" class="form-control input-sm" /> 
+			<label for="kkc"> KKC: </label>
+			<input name="kkc" id="kkc" type="number" class="form-control input-sm" />
+			<label for="cgst"> CGST : </label>
+			<input name="cgst" type="number" class="form-control input-sm" id="cgst"/> 
+			<label for="sgst"> SGST: </label>
+			<input name="sgst" type="number" class="form-control input-sm" id="sgst"/>
+			<label for="igst"> IGST: </label>
+			<input name="igst" type="number" class="form-control input-sm" id="igst"/> 
+			<label for="igst2"> IGST(0%) for SEZ: </label>
+			<input name="igstsez" type="number" class="form-control input-sm" id="igstsez"/>
+			<label for="tamnt"> Total Amnt Rs: </label>
+			<input name="tamnt" type="number" class="form-control input-sm" id="tamnt"/>
+		  </div>
+		<div id="rcvbls" class="col-md-2">
+		   <label class="hd" style="margin-left:50px;"><b>Receivables</b></label><br/><br/><br/>
+		   <label for="tds"> TDS: </label>
+		   <input name="tds" type="number" id="tds" class="form-control input-sm"/> 
+		   <label for="amtrcd"> Amt to be Recd : </label>
+		   <input name="amtrcd" type="number"   class="form-control input-sm"/> 
+		   <label for="amtrcd"> Amnt Recd : </label>
+		   <input name="amtrcvd" type="number"   class="form-control input-sm"/> 
+		   <label for="blnce"> Balance: </label>
+		   <input name="blnce" type="number" class="form-control input-sm"/>
+		</div>
+		<div id="rxd" class="col-md-2">
+		  <label class="hd" style="margin-left:50px;"><b>Rx details</b></label><br/><br/><br/>
+		  <label for="duedt"> Due Date: </label>
+		   <input name="duedt" type="date" class="form-control input-sm"/> 
+		   <label for="amtrxdt"> Amnt Rx date : </label>
+		   <input name="amtrxdt" type="date"   class="form-control input-sm"/> 
+		   <label for="chqdt"> Cheque Date: </label>
+		   <input name="chqdt" type="date" class="form-control input-sm"/> 
+		 <label for="chqno"> Cheque No./NEFT: </label>
+		   <input name="chqno" type="text" class="form-control input-sm"/>
+		</div>
+		<div id="tax" class="col-md-2">
+		   <label class="hd" style="margin-left:70px;"><b>Tax</b></label><br/><br/><br/>
+		   <label for="16a"> Form-16A: </label>
+		   <input name="f16a" type="text" class="form-control input-sm"/> 
+		   <label for="stclaim"> St claim : </label>
+		   <input name="stclm" type="text"   class="form-control input-sm"/>
+
+		</div>
+		<div id="rcvbls2" class="col-md-2">
+			<label class="hd" style="margin-left:50px;"><b>Receivables</b></label><br/><br/><br/>
+		   <label for="rsdto">Raised To: </label>
+		   <input name="rsdto" type="text" class="form-control input-sm"/> 
+		   <label for="month"> Month : </label>
+		   <input name="month" type="month"   class="form-control input-sm"/> 
+		  <label for="cnsltname"> Consultant Name : </label>
+		   <input name="cnsltname" type="text"  class="form-control input-sm" />
+		</div>
+		 </form>
+		 </div><hr/>
+		 <div class="col-lg-3 col-lg-offset-10 col-md-3 col-md-offset-9 col-sm-offset-6 col-xs-offset-4">
+			<input name="regbutton" type="button" id="button" value="SUBMIT" class="btn btn-primary"/>
+		 </div><br/><br/><br/><br/>
+		 <form class="form-inline">
+		   <div >
+			<b>Date : </b> <input type="search" id="search" class="form-control input-sm" />
+			<b>Invoice No :</b> <input type ="text" id="no" class="form-control input-sm"/>
+			<input type="submit" id="srch" value="Search" class="btn btn-primary" />
+		   </div>
+		 </form>
+		 
+		 
+		 </div>
+		</body>
+		</html>
