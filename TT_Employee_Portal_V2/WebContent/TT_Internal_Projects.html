@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+   <style>
+    input[type=text],input[type=date]
+	{
+	  width:200px;
+	}
+   </style>
+   
+ </head>
+ <body style= "background-color:#85adad;margin:2px;">
+    <div class="main">
+	  <div class="container-fluid">
+	    <div class="row">
+		 <form class="form-inline">
+		  <label style="font-size:15px">Employee Name:</label>
+		  <input type="text" class="form-control input-sm" style="width:200px;"/>
+			  
+		 </form>
+		</div>
+	  </div>
+	</div><br/><br/>
+	<div class="main">
+	  <div class="container-fluid">
+	    <div class="row">
+	    <form action="InternalProjectRegistration" method="post" class="form-group">
+		  <div class="table-responsive">
+		     <table class="table">
+			    <tr>
+				  <td><b>Project Name </b></td>
+	              <td><input type="text" name="pname" class="form-control"/></td>
+	              <td><b>Start Date</td>
+	              <td><input type="date" name="dob" class="form-control"/></td>
+				</tr>
+				<tr>
+				  <td><b>End Date </b></td>
+	              <td><input type="date" name="dob" class="form-control"/></td>
+	              <td><b>Project Manager</td>
+	              <td><input type="text" name="pm" class="form-control"/></td>
+				</tr>
+			 </table>
+			 <button 
+		    class="btn btn-primary col-lg-offset-9 col-md-offset-10 col-sm-offset-10 col-xs-offset-11">Submit</button>
+		  </div>
+		  </form>
+		</div>
+	  </div>
+	</div>
+ </body>
+</html>

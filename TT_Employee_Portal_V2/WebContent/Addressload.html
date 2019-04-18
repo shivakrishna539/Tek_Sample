@@ -1,0 +1,87 @@
+<html>
+ <head>
+ 
+   <style>
+   body
+   {
+     <!--background-color :  #80bfff;
+	    ;-->
+   }
+     #main
+	 {
+	
+	   width:1300px;
+	   background-color :#a3c2c2;
+	   padding-left:10px;
+	   border:1px solid;
+	 
+	 }
+	 <--input[type=text] {
+                      width: 23%;
+					  height:4%;
+                     box-sizing: border-box;
+					 margin-left:10px;
+					  
+                       }
+	input[type=date]{
+	                  width: 23%;
+					  height:4%;
+	                 }-->
+	.bt { 
+	  background-color: #006666 ;
+      border: 1px rounded;
+      color: white;
+      padding: 6px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+
+      margin: 4px 2px;
+	  }
+   </style>
+   <script>
+	  function copyAddress()
+	  {
+	     var x = document.getElementById("ad").value;
+		 window.alert(x);
+		 document.getElementById("cad").value=x;
+	  } 
+   </script>
+ </head>
+ <body>
+  <form action="EmployeeAddress"  method="post">
+    <div id="main">
+		
+	  <label><b>Permeant_Address </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	     &nbsp&nbsp:&nbsp</b>
+	     <input type="text" name="pradd" id="ad"/><br/><br/>
+	  <label><b>If Permeant_Address is same as Present_Address :</b></label><input  onclick="copyAddress()" type="checkbox"/><br/><br/>
+	  <label><b>Present_Address</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp</b>
+	      <input id="cad" type="text" name="pmname"/><br/><br/>
+	  <label><b>Email_Address</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp</b>
+	      <input type="text" name="email"/><br/><br/>
+	  <label><b>Alternative_Email_Address</label>&nbsp&nbsp&nbsp:&nbsp</b>
+	     <input type="text" name="alt_email"/><br/><br/>
+	  <label><b>Mobile :</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp</b>
+	      <input type="text" name="mobile"/><br/><br/>
+	  <label><b>Alternative_Mobile</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	  &nbsp&nbsp:&nbsp</b>
+	       <input type="text" name="alt_mobile"/><br/>
+		   <input type="submit" value = "Submit" style="margin-left:200px" class="bt">
+		   <a href="TT_Family_details.html" class="bt">Next</a>
+		   <a href="TT_EMP_Registration.html" class="bt">Cancel</a>
+   </form>
+        <br><br>
+		   <label id="ename"><b> Search For Employee By :</b></label>
+		   <form action="AddressList" name="list" id="list" method="post">
+		   <input type="text" placeholder="Name..." name="name"/>&nbsp <input type="text" placeholder="Skill..." name="Skill"/>&nbsp 
+		   <input type="text" placeholder="Designation..." name="Designation"/> 
+		   <input type="submit"   value="Search">
+		   </form>
+     </div>
+  </div>
+ </body>
+</html>

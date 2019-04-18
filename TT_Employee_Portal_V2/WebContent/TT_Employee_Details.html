@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  
+  <link rel="stylesheet" href="NewRegistration_buttons_include_Boot.css">
+  <script>
+     function ed5()  { 
+	      document.getElementById("contents5").style.display = "block";
+	      document.getElementById("contents2").style.display = "none";
+	      document.getElementById("contents3").style.display = "none";
+	      document.getElementById("contents4").style.display = "none";
+	      document.getElementById("contents1").style.display = "none";
+	 }
+	 function ed3() {
+		 document.getElementById("contents1").style.display = "none";
+		 document.getElementById("contents2").style.display = "none";
+		 document.getElementById("contents3").style.display = "block";
+		 document.getElementById("contents4").style.display = "none";
+		 document.getElementById("contents5").style.display = "none";
+	 } 
+	 
+	 function ed4() {
+		 document.getElementById("contents1").style.display = "none";
+		 document.getElementById("contents2").style.display = "none";
+		 document.getElementById("contents3").style.display = "none";
+		 document.getElementById("contents4").style.display = "block";
+		 document.getElementById("contents5").style.display = "none";
+	 } 
+	 function ed1() {
+		 document.getElementById("contents1").style.display = "block";
+		 document.getElementById("contents2").style.display = "none";
+		 document.getElementById("contents3").style.display = "none";
+		 document.getElementById("contents4").style.display = "none";
+		 document.getElementById("contents5").style.display = "none";
+	 } 
+	 function ed2() {
+		 document.getElementById("contents1").style.display = "none";
+		 document.getElementById("contents2").style.display = "block";
+		 document.getElementById("contents3").style.display = "none";
+		 document.getElementById("contents4").style.display = "none";
+		 document.getElementById("contents5").style.display = "none";
+	 } 
+  </script>
+</head>
+<body style="background-color:#a3c2c2">
+ <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background-color:#7575a3">
+  <div class="navbar-header" style="background-color: #7575a3">
+     <button  type="button" 
+	     class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+         <span class="icon-bar"></span>
+		 <span class="icon-bar"></span>
+		 <span class="icon-bar"></span>
+     </button>
+  </div> 
+
+	  <div class="navbar-collapse collapse">
+	   <div class="nav navbar-nav">
+	    <div  class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+	      <button class="btn" id="btn"
+		         onclick="ed5()"> 
+				 <a href="#" 
+				   onclick="document.getElementById('content5').style.cssText = ''">
+			     <b style="color:black"> Personal Details</b>
+			     </a>
+		  </button>
+	    </div>
+		
+		<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+         <button class="btn"
+		         onclick="ed3()" >
+				 <a href="#" id="btn"
+				    onclick="document.getElementById('contents3').style.cssText = ''">
+			      <b style="color:black"> Address Details</b>
+				 </a>
+	     </button>
+	    </div>
+	   
+	  <div  class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+	    <button class="btn" id="btn"
+		         onclick="ed4()" ><a href="#" 
+				 onclick="document.getElementById('contents4').style.cssText = ''">
+			   <b style="color:black"> Family Details</b></a>
+	    </button>
+	  </div>
+	  
+	  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-3">
+         <button class="btn" id="btn"
+		         onclick="ed1()" >
+				 <a href="#" 
+				    onclick="document.getElementById('contents1').style.cssText = ''">
+			      <b style="color:black"> Education Details</b>
+				 </a>
+	     </button>
+	    </div>
+		
+	  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+         <button class="btn" id="btn"
+		         onclick="ed2()" >
+				 <a href="#" 
+				    onclick="document.getElementById('contents2').style.cssText = ''">
+			      <b style="color:black"> Experience Details</b>
+				 </a>
+	     </button>
+	    </div>
+	</div>
+    </div>
+   
+ </nav>
+  	 
+	 
+	   <div id="contents5" style="display:block;" class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="TT_EMP_Registration.html" allowfullscreen></iframe>
+       </div>
+       <div id="contents1" style="display:none;" class="embed-responsive embed-responsive-16by9">
+         <iframe id="edufrm" class="embed-responsive-item" src="TT_Education_details.html" allowfullscreen></iframe>
+       </div>
+       <div id="contents2" style="display:none;" class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="TT_Experience_details.html" allowfullscreen></iframe>
+       </div>
+       <div id="contents3" style="display:none;" class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" name="address" src="TT_Address_details.html" allowfullscreen></iframe>
+       </div>
+       <div id="contents4" style="display:none;" class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="TT_Family_details.html" allowfullscreen></iframe>
+      </div>
+  </div>
+</body>
+<head>
