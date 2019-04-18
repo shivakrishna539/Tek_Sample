@@ -1,0 +1,52 @@
+
+.head { text-align : center;
+border-top : 1px solid;
+border-bottom : 1px solid ;
+height : 40px;
+width :1200px;
+background-color : 	 #ccccb3;
+
+}
+h3{
+border-bottom: 1px solid;
+ margin-right: 50px; }
+
+.ip {
+margin-left : 70px; }
+
+.a { border : 1px solid ;
+    height : 650px;
+	width : 1200px;
+     padding : 0px;
+	 margin-left : 0px;
+	background-color: #80bfff;
+}
+
+.edetails { 
+            padding-left : 10px;
+           	}
+.pdetails{
+	       padding-left : 10px;
+           margin-right : 50px; }
+.btm {   
+   padding-left : 10px;
+  left : 500px;}
+  
+  .btn {
+	
+	 background-color: #006666 ;
+  border: 1px rounded;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+	
+	
+  margin-left : 230px;
+  cursor: pointer;
+ }
+  
+  

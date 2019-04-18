@@ -1,0 +1,25 @@
+#main
+	 {
+	   background-color:#b3b3cc;
+	   min-height:30px;
+	   text-align:center;
+	   font-size:20px; 
+       padding:6px 6px;   
+	 }
+.navbar
+{
+	min-height:40px;
+}
+.btn
+{
+	background-color:#b3b3cc;
+	color:block;
+     font-size: 16px;  
+
+}
+.btn:hover{background-color: #85adad;border-radius:20px;}
+.icon-bar{background-color: white}
+
+
+
+
