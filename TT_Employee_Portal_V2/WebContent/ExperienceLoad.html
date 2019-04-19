@@ -1,0 +1,117 @@
+<html>
+<head>
+<style type="text/css">
+#bdy{ border : 1px solid black;  background-color :  #a3c2c2 ; text-align : left ; padding-left:10px; height : 400px;}
+#btn {   background-color: #006666 ;
+  border: 1px rounded;
+  color: white;
+  padding: 8px 11px;
+ float:right;
+ margin-right:80px;
+ margin-top:15px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  }
+  #cname{margin-left:36px;width : 140px;}
+  #locate{width :90px;margin-left : 70px;}
+#lleft { margin-left : 70px;    }
+#ipleft { width : 120px; margin-left : 40px;    }
+#dsgn { width : 120px;  margin-left : 50px;   }
+#ipleft2{width : 70px; margin-left:58px;}
+#ipleft2a{width : 70px; margin-left:65px;}
+ #ipleft3{width:80px;}
+ #ctc{margin-left: 50px; width: 80px;}
+ #ctc2{width:80px; margin-left: 60px;  }
+#more_fields{ margin-left : 50px;  }
+body {border:1px solid black; 
+width: 1230px;
+height : 800px;
+background-color: #a3c2c2;}
+input { margin-left : 20px; }
+</style>
+<script>
+var a = 1; var b = 1; var c = 1; var d = 1;var e = 1;var f = 1; var g = 1;
+
+function textBoxCreate(){
+	var a1 = document.createElement("INPUT");
+	a1.setAttribute("type", "text");
+	a1.setAttribute("id","cname");
+	a1.setAttribute("Name", "cname_" + a);
+	document.getElementById("row1").appendChild(a1);
+	a++;
+	var b1 = document.createElement("INPUT");
+	b1.setAttribute("type", "text");
+	b1.setAttribute("id","locate");
+	b1.setAttribute("Name", "locate_" + b);
+	document.getElementById("row1").appendChild(b1);
+	b++;
+var c1 = document.createElement("INPUT");
+c1.setAttribute("type", "date");
+c1.setAttribute("id","ipleft2");
+c1.setAttribute("Name", "from_" + c);
+document.getElementById("row1").appendChild(c1);
+c++;
+var d1 = document.createElement("INPUT");
+d1.setAttribute("type", "date");
+d1.setAttribute("id","ipleft2a");
+d1.setAttribute("Name", "to_" + d);
+document.getElementById("row1").appendChild(d1);
+d++;
+var e1 = document.createElement("INPUT");
+e1.setAttribute("type", "text");
+e1.setAttribute("id","dsgn");
+e1.setAttribute("Name", "dsgn_" + e);
+document.getElementById("row1").appendChild(e1);
+e++;
+var f1 = document.createElement("INPUT");
+f1.setAttribute("type", "text");
+f1.setAttribute("id","ipleft");
+f1.setAttribute("Name", "tech_" + f);
+document.getElementById("row1").appendChild(f1);
+f++;
+var g1 = document.createElement("INPUT");
+g1.setAttribute("type", "text");
+g1.setAttribute("id","ctc2");
+g1.setAttribute("Name", "ctc_" + g);
+document.getElementById("row1").appendChild(g1);
+g++;
+
+}
+function load()
+{
+	document.list.submit();
+	}
+</script>
+
+
+</head>
+<body id="bdy">
+
+<button id="btn" class="name" onclick="textBoxCreate()">Add</button>
+<form action="EmployeeExperience" id="mainform" method="post" name="mainform">
+ <label id="lleft">  Company name : </label > <label id="lleft">  Location : </label> <label id="lleft">  From  : </label> 
+ <label id="lleft">  To  : </label> <label id="lleft"style = "margin-left:100px;"> designation  : </label> <label id="lleft"> technologies : </label>
+  <label id="lleft" style="margin-left:100px;">  CTC  : </label> <br> 
+
+<input id="cname" type="text"  name="cname" />
+<input id="locate" type="text"  name="locate" />
+<input  id="ipleft2" type="date"  name="from" />
+<input  id="ipleft2"  type="date" name="to" />
+<input id="ipleft" type="text" style="width:120px;" name="dsgn" />
+<input id="ipleft" type="text" style="width:120px; margin-left:50px;" name="tech" />
+<input id="ctc" type="number" " name="ctc" />
+
+<p id="row1"></p> <br>
+<p id="row2"> </p>
+<input type="submit" value="Submit"/>
+
+</form>
+<form action="ExperienceList" method="post"  name="list">
+<input type="text" placeholder="Name..." name="name"/>&nbsp 
+<input type="text" placeholder="Skill..." name="Skill"/>&nbsp 
+<input type="text" placeholder="Designation..." name="Designation"/> 
+<input type="submit"   value="Search">
+</form>
+</body>
+</html>

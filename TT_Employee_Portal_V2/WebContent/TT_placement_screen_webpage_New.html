@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	<style>
+	  input[type="text"],[type="date"]
+	{
+	  width:120px;
+	}
+	</style>
+	<script>
+	function load()
+    {
+    	document.list.submit();
+    	}
+	</script>
+<body style="background-color:#a3c2c2;margin:5px;" onload="load()">
+   <div class="container-fluid">
+    <div class="row">
+	 <label style="font-size:20px;">Search For Employee Based on</label>
+        <form action="PlacementList" method="post" class="form-group" name="list">
+            <div id="main" class="table-responsive">
+			
+             <table class="table ">
+                 <tr >
+                  <td ><b>Designation</b></td>
+                  <td ><input class="form-control input-sm" type="text" name="designation" /></td>
+                  <td><b>Application_Id</b></td>
+                  <td><input class="form-control input-sm" type="text" name="appid"/></td>
+                  <td><b>Date of Joining </b></td>
+	              <td><input class="form-control input-sm" type="date" name="doj"/></td>
+                 </tr>
+                 <tr>
+				  <td><b>Recuriter</td>
+	              <td><input class="form-control input-sm" type="text" name="recuriter"/></td>
+                  <td><b>Placement Status</b></td>
+                  <td><input class="form-control input-sm" type="text" name="pstatus"/></td>
+                  <td><b>Skill</b></td>
+				  <td><input class="form-control input-sm" type="text" name="skill" /></td>
+                 </tr>
+				</table>
+				<div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-offset-8 col-xs-offset-5">
+		           <button class="btn btn-primary" >Submit</button>
+                   <button type="reset" class="btn btn-primary" value="Clear" >
+				      <span class="glyphicon glyphicon-refresh"></span> Clear
+				   </button>
+			    </div>
+			</div>
+			
+			
+			
+		</form>
+	<div>
+  </div>
+</body>
+</html>
