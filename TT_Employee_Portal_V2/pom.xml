@@ -2,6 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tt_employee_portal</groupId>
   <artifactId>employee_portal</artifactId>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <build>
       <plugins>
@@ -76,6 +77,20 @@
                </execution>
             </executions>
          </plugin>
+        <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>2.4</version>
+    <configuration>
+     <webResources>
+        <resource>
+           this is relative to the pom.xml directory 
+          <directory>TT_Employee_Portal_V2\WebContent\WEB-INF\web.xml</directory>
+        </resource>
+      </webResources> 
+ <!--  <failOnMissingWebXml>false</failOnMissingWebXml>  -->
+    </configuration>
+  </plugin>
       </plugins>
    </build>
 
