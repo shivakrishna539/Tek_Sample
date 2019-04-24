@@ -85,7 +85,7 @@
      <webResources>
         <resource>
            this is relative to the pom.xml directory 
-          <directory>Tek_Sample/TT_Employee_Portal_V2/WebContent/WEB-INF/web.xml</directory>
+          <directory>/WebContent/WEB-INF/web.xml</directory>
         </resource>
       </webResources> 
  <!--  <failOnMissingWebXml>false</failOnMissingWebXml>  -->
