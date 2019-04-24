@@ -82,12 +82,12 @@
     <artifactId>maven-war-plugin</artifactId>
     <version>2.4</version>
     <configuration>
-     <webResources>
+     <!-- <webResources>
         <resource>
-           this is relative to the pom.xml directory 
-          <directory>TT_Employee_Portal_V2/WebContent/WEB-INF/</directory>
-        </resource>
-      </webResources> 
+           this is relative to the pom.xml directory --> 
+          <webXml>TT_Employee_Portal_V2/WebContent/WEB-INF/web.xml</webXml>
+        <!-- </resource>
+      </webResources> -->
  <!--  <failOnMissingWebXml>false</failOnMissingWebXml>  -->
     </configuration>
   </plugin>
