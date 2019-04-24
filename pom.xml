@@ -85,10 +85,10 @@
      <!-- <webResources>
         <resource>
            this is relative to the pom.xml directory --> 
-         <!-- <webXml>TT_Employee_Portal_V2/WebContent/WEB-INF/web.xml</webXml> -->
-      <warSourceDirectory>
+         <webXml>TT_Employee_Portal_V2/WebContent/WEB-INF/web.xml</webXml> 
+     <!--  <warSourceDirectory>
         <webXml>TT_Employee_Portal_V2/WebContent/WEB-INF/web.xml</webXml>
-          </warSourceDirectory>
+          </warSourceDirectory> -->
         <!-- </resource>
       </webResources> -->
  <!--  <failOnMissingWebXml>false</failOnMissingWebXml>  -->
